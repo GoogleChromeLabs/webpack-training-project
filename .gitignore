@@ -1,0 +1,7 @@
+node_modules
+public/build
+public/index.html
+public/users/index.html
+.idea
+.vscode
+appConfig.json
