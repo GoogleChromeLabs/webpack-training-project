@@ -12,6 +12,7 @@
  */
 
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
@@ -60,7 +61,10 @@ module.exports = {
     }),
   ].concat(
     isProduction
-      ? []
+      ? [
+          // Minimize the app code
+          new webpack.optimize.UglifyJsPlugin(),
+        ]
       : [
           // Force writing the HTML files to disk when running in the development mode
           // (otherwise, webpack-dev-server won’t serve the app)
