@@ -64,6 +64,10 @@ module.exports = {
       ? [
           // Minimize the app code
           new webpack.optimize.UglifyJsPlugin(),
+          // Replace `process.env.NODE_ENV` with `"production"`
+          new webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"production"',
+          }),
         ]
       : [
           // Force writing the HTML files to disk when running in the development mode

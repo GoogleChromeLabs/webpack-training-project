@@ -72,9 +72,11 @@ const setupErrorListener = () => {
 };
 
 const initDevelopmentHelpers = () => {
-  setupErrorListener();
+  if (process.env.NODE_ENV !== 'production') {
+    setupErrorListener();
 
-  runChecks();
+    runChecks();
+  }
 };
 
 module.exports = initDevelopmentHelpers;
