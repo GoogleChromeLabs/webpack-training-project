@@ -15,6 +15,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -80,6 +81,8 @@ module.exports = {
           new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"',
           }),
+          // Remove all Moment.js’ locales expect the English one
+          new MomentLocalesPlugin(),
         ]
       : [
           // Force writing the HTML files to disk when running in the development mode
