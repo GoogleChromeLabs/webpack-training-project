@@ -14,6 +14,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -68,7 +69,9 @@ module.exports = {
     }),
   ].concat(
     isProduction
-      ? []
+      ? [
+          new MomentLocalesPlugin(),
+        ]
       : [
           // Force writing the HTML files to disk when running in the development mode
           // (otherwise, webpack-dev-server won’t serve the app)
