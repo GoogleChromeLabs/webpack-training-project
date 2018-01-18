@@ -83,6 +83,8 @@ module.exports = {
           }),
           // Remove all Moment.js’ locales expect the English one
           new MomentLocalesPlugin(),
+          // Concatenate modules where possible
+          new webpack.optimize.ModuleConcatenationPlugin(),
         ]
       : [
           // Force writing the HTML files to disk when running in the development mode
