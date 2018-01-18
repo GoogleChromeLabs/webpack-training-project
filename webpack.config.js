@@ -13,6 +13,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const InlineChunkWebpackPlugin = require('html-webpack-inline-chunk-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
@@ -98,6 +99,10 @@ module.exports = {
           new webpack.optimize.CommonsChunkPlugin({
             name: 'runtime',
             minChunks: Infinity,
+          }),
+          // Inline the webpack’s runtime
+          new InlineChunkWebpackPlugin({
+            inlineChunks: ['runtime'],
           }),
         ]
       : [
