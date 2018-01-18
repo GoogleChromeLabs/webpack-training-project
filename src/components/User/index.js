@@ -25,9 +25,6 @@ import createHashRouter from 'hash-router';
 import createPlainComponent from '../../utils/createPlainComponent';
 import renderUserHeader from '../UserHeader';
 import renderUsernameInput from '../UsernameInput';
-import renderUserProfile from '../UserProfile';
-import renderUserFollowers from '../UserFollowers';
-import renderUserFollowing from '../UserFollowing';
 import './style.css';
 
 const Route = {
@@ -91,7 +88,9 @@ const render = target => {
     routerTarget.innerHTML = '';
     renderUsername(routerTarget, { username });
     renderNavigation(routerTarget, { username, currentRoute: Route.USERNAME });
-    renderUserProfile(routerTarget, { username });
+    import('../UserProfile').then(UserProfile => {
+      UserProfile.default(routerTarget, { username });
+    });
   });
 
   router.addRoute('#/:username/followers', (hash, options) => {
@@ -100,7 +99,9 @@ const render = target => {
     routerTarget.innerHTML = '';
     renderUsername(routerTarget, { username });
     renderNavigation(routerTarget, { username, currentRoute: Route.FOLLOWERS });
-    renderUserFollowers(routerTarget, { username });
+    import('../UserFollowers').then(UserFollowers => {
+      UserFollowers.default(routerTarget, { username });
+    });
   });
 
   router.addRoute('#/:username/following', (hash, options) => {
@@ -109,7 +110,9 @@ const render = target => {
     routerTarget.innerHTML = '';
     renderUsername(routerTarget, { username });
     renderNavigation(routerTarget, { username, currentRoute: Route.FOLLOWING });
-    renderUserFollowing(routerTarget, { username });
+    import('../UserFollowing').then(UserFollowing => {
+      UserFollowing.default(routerTarget, { username });
+    });
   });
 
   window.addEventListener('hashchange', router);
