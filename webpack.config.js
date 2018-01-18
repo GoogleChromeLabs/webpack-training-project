@@ -24,10 +24,12 @@ console.log(
 );
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+  },
   output: {
     path: path.resolve(__dirname, 'public', 'build'),
-    filename: isProduction ? 'bundle.[chunkhash].js' : 'bundle.js',
+    filename: isProduction ? '[name].[chunkhash].js' : '[name].js',
     publicPath: '/build/',
   },
   module: {
@@ -85,6 +87,18 @@ module.exports = {
           new MomentLocalesPlugin(),
           // Concatenate modules where possible
           new webpack.optimize.ModuleConcatenationPlugin(),
+
+          // Extract the vendor code
+          new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: module =>
+              module.context && module.context.includes('node_modules'),
+          }),
+          // Extract the webpack’s runtime
+          new webpack.optimize.CommonsChunkPlugin({
+            name: 'runtime',
+            minChunks: Infinity,
+          }),
         ]
       : [
           // Force writing the HTML files to disk when running in the development mode
