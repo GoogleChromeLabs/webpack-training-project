@@ -13,7 +13,7 @@
     "babel-polyfill": "^6.26.0",
     "hash-router": "^0.4.0",
     "moment": "^2.19.3",
-    "whatwg-fetch": "^2.0.3"
+    "unfetch": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
