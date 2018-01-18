@@ -26,7 +26,8 @@ console.log(
 
 module.exports = {
   entry: {
-    main: './src/index.js',
+    app: './src/app.js',
+    landing: './src/landing.js',
   },
   output: {
     path: path.resolve(__dirname, 'public', 'build'),
@@ -67,11 +68,13 @@ module.exports = {
     // Emit HTML files that serve the app
     new HtmlWebpackPlugin({
       template: 'src/templates/landing.html',
+      chunks: ['landing', 'vendor', 'runtime'],
       filename: path.resolve(__dirname, 'public/index.html'),
       alwaysWriteToDisk: true,
     }),
     new HtmlWebpackPlugin({
       template: 'src/templates/app.html',
+      chunks: ['app', 'vendor', 'runtime'],
       filename: path.resolve(__dirname, 'public/users/index.html'),
       alwaysWriteToDisk: true,
     }),
