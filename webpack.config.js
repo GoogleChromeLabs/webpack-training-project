@@ -22,7 +22,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
   mode: isProduction ? 'production' : 'development',
   entry: {
-    main: './src/index.js',
+    app: './src/app.js',
+    landing: './src/landing.js',
   },
   output: {
     path: path.resolve(__dirname, 'public', 'build'),
@@ -68,12 +69,14 @@ module.exports = {
     // Emit HTML files that serve the app
     new HtmlWebpackPlugin({
       template: 'src/templates/landing.html',
+      excludeChunks: ['runtime~app', 'vendors~app', 'app'],
       filename: path.resolve(__dirname, 'public/index.html'),
       alwaysWriteToDisk: true,
       inlineSource: 'runtime~.+\\.js',
     }),
     new HtmlWebpackPlugin({
       template: 'src/templates/app.html',
+      excludeChunks: ['runtime~landing', 'vendors~landing', 'landing'],
       filename: path.resolve(__dirname, 'public/users/index.html'),
       alwaysWriteToDisk: true,
       inlineSource: 'runtime~.+\\.js',

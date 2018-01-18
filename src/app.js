@@ -19,7 +19,6 @@
 
 import 'babel-polyfill';
 
-import renderHome from './components/Home';
 import renderUser from './components/User';
 import initDevelopmentHelpers from './initDevelopmentHelpers';
 
@@ -27,17 +26,4 @@ import initDevelopmentHelpers from './initDevelopmentHelpers';
 // Feel free to not think about this call.
 initDevelopmentHelpers();
 
-const path = window.location.pathname;
-
-switch (path) {
-  case '/':
-    renderHome(document.querySelector('#root'));
-    break;
-
-  case '/users/':
-    renderUser(document.querySelector('#root'));
-    break;
-
-  default:
-    throw new Error('Unknown page. Try going to / or /users/');
-}
+renderUser(document.querySelector('#root'));
