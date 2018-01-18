@@ -107,6 +107,8 @@ module.exports = {
           new InlineChunkWebpackPlugin({
             inlineChunks: ['runtime'],
           }),
+          // Make module IDs more stable
+          new webpack.HashedModuleIdsPlugin(),
         ]
       : [
           // Force writing the HTML files to disk when running in the development mode
