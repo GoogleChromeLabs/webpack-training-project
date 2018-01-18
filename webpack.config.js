@@ -23,7 +23,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public', 'build'),
-    filename: 'bundle.js',
+    filename: isProduction ? 'bundle.[chunkhash].js' : 'bundle.js',
     publicPath: '/build/',
   },
   module: {
