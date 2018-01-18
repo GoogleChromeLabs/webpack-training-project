@@ -12,6 +12,7 @@
  */
 
 const path = require('path');
+const webpack = require('webpack');
 const InlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
@@ -86,6 +87,7 @@ module.exports = {
       ? [
           new MomentLocalesPlugin(),
           new InlineSourcePlugin(),
+          new webpack.HashedModuleIdsPlugin(),
         ]
       : [
           // Force writing the HTML files to disk when running in the development mode
