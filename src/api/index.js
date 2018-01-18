@@ -11,12 +11,11 @@
  * limitations under the License.
  */
 
-import 'whatwg-fetch';
+import fetch from 'unfetch';
 import appConfig from '../../appConfig';
 
 const fetchWithAuth = url =>
-  window
-    .fetch(`${url}?access_token=${appConfig.accessToken}`)
+  fetch(`${url}?access_token=${appConfig.accessToken}`)
     .then(response => Promise.all([response.status, response.json()]))
     .then(results => ({
       status: results[0],
