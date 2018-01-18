@@ -12,6 +12,7 @@
  */
 
 const path = require('path');
+const InlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
@@ -69,16 +70,19 @@ module.exports = {
       template: 'src/templates/landing.html',
       filename: path.resolve(__dirname, 'public/index.html'),
       alwaysWriteToDisk: true,
+      inlineSource: 'runtime~.+\\.js',
     }),
     new HtmlWebpackPlugin({
       template: 'src/templates/app.html',
       filename: path.resolve(__dirname, 'public/users/index.html'),
       alwaysWriteToDisk: true,
+      inlineSource: 'runtime~.+\\.js',
     }),
   ].concat(
     isProduction
       ? [
           new MomentLocalesPlugin(),
+          new InlineSourcePlugin(),
         ]
       : [
           // Force writing the HTML files to disk when running in the development mode
