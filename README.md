@@ -21,7 +21,7 @@ Using webpack, optimize this repository to make it as small and as network-effec
 
 Focus on changing [the webpack config](./webpack.config.js), but don’t be afraid to change the app too – e.g., some optimizations might come from replacing dependencies.
 
-Use _TODO: ARTICLE LINK_ for help.
+Use [the article about performance optimization with webpack](https://developers.google.com/web/fundamentals/performance/webpack/) for help.
 
 Want to see our solution? Check [issue #1](https://github.com/iamakulov/webpack-training-project/issue/1).
 
