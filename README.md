@@ -1,5 +1,7 @@
 # Webpack performance project
 
+[![Gitter](https://img.shields.io/gitter/room/Webpack-Training-Project/Lobby.svg)](https://gitter.im/Webpack-Training-Project/Lobby)
+
 A month ago, a popular open-source hosting company decided to build a new extra-light version of its main product – a site with all open-source projects it hosts. They planned that people will use this site on devices with a poor network. They called this product _LitHub_.
 
 As soon as _LitHub_ started, the company realized that all developers are busy on different projects. Somehow, they managed to find a developer who agreed to create this product in their overtime. But two days ago the developer switched the department, and the company decided to hire you to finish the work.
@@ -22,6 +24,8 @@ Focus on changing [the webpack config](./webpack.config.js), but don’t be afra
 Use _TODO: ARTICLE LINK_ for help.
 
 Want to see our solution? Check [issue #1](https://github.com/iamakulov/webpack-training-project/issue/1).
+
+Want to discuss this task? Join [the Gitter chat](https://gitter.im/Webpack-Training-Project/Lobby).
 
 ## How to develop the app
 
