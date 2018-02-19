@@ -37,19 +37,19 @@ Want to discuss this task? Join [the Gitter chat](https://gitter.im/Webpack-Trai
 git clone https://github.com/iamakulov/webpack-training-project.git
 ```
 
-2\. Generate a GitHub access token: run
+2\. Install the dependencies:
+
+```bash
+npm install
+```
+
+3\. Generate a GitHub access token: run
 
 ```
 npm run token
 ```
 
 and follow the instructions.
-
-3\. Install the dependencies:
-
-```bash
-npm install
-```
 
 **Launch the app**
 
