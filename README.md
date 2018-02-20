@@ -23,7 +23,7 @@ Focus on changing [the webpack config](./webpack.config.js), but don’t be afra
 
 Use [the article about performance optimization with webpack](https://developers.google.com/web/fundamentals/performance/webpack/) for help.
 
-Want to see our solution? Check [issue #1](https://github.com/iamakulov/webpack-training-project/issue/1).
+Want to see our solution? Check [issue #1](https://github.com/iamakulov/webpack-training-project/issues/1).
 
 Want to discuss this task? Join [the Gitter chat](https://gitter.im/Webpack-Training-Project/Lobby).
 
