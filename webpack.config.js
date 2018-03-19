@@ -17,11 +17,8 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-console.log(
-  `Running webpack in the ${isProduction ? 'production' : 'development'} mode`,
-);
-
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public', 'build'),
@@ -45,7 +42,6 @@ module.exports = {
       },
     ],
   },
-  devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
   plugins: [
     // Emit HTML files that serve the app
     new HtmlWebpackPlugin({
