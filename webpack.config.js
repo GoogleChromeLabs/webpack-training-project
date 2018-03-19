@@ -22,6 +22,7 @@ console.log(
 );
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public', 'build'),
@@ -45,7 +46,6 @@ module.exports = {
       },
     ],
   },
-  devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
   plugins: [
     // Emit HTML files that serve the app
     new HtmlWebpackPlugin({
