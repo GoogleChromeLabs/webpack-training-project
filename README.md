@@ -1,6 +1,4 @@
-# Webpack performance project
-
-[![Gitter](https://img.shields.io/gitter/room/Webpack-Training-Project/Lobby.svg)](https://gitter.im/Webpack-Training-Project/Lobby)
+ # Webpack performance project
 
 A month ago, a popular open-source hosting company decided to build a new extra-light version of its main product – a site with all open-source projects it hosts. They planned that people will use this site on devices with a poor network. They called this product _LitHub_.
 
