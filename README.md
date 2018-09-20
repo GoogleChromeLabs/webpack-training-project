@@ -1,4 +1,4 @@
- # Webpack performance project
+# Webpack performance project
 
 A month ago, a popular open-source hosting company decided to build a new extra-light version of its main product – a site with all open-source projects it hosts. They planned that people will use this site on devices with a poor network. They called this product _LitHub_.
 
@@ -14,8 +14,8 @@ _The LitHub logo._
 
 Using webpack, optimize this repository to make it as small and as network-effective as possible. Here’s what to look at:
 
-* app size (hint: it could be decreased to roughly 160 KB – or even further);
-* caching effectiveness.
+- app size (hint: it could be decreased to roughly 160 KB – or even further);
+- caching effectiveness.
 
 Focus on changing [the webpack config](./webpack.config.js), but don’t be afraid to change the app too – e.g., some optimizations might come from replacing dependencies.
 
@@ -32,7 +32,7 @@ Want to discuss this task? Join [the Gitter chat](https://gitter.im/Webpack-Trai
 1\. Clone the repository:
 
 ```
-git clone https://github.com/iamakulov/webpack-training-project.git
+git clone https://github.com/GoogleChromeLabs/webpack-training-project.git
 ```
 
 2\. Install the dependencies:
