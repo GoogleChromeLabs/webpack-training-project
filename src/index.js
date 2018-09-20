@@ -17,7 +17,7 @@
  * and renders the corresponding component.
  */
 
-import 'babel-polyfill';
+import '@babel/polyfill';
 
 import renderHome from './components/Home';
 import renderUser from './components/User';

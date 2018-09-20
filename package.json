@@ -10,7 +10,7 @@
     "token": "node ./helpers/save-github-token.js"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "@babel/polyfill": "^7.0.0",
     "hash-router": "^0.4.0",
     "moment": "^2.22.2",
     "whatwg-fetch": "^3.0.0"
