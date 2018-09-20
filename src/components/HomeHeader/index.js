@@ -24,7 +24,7 @@ const render = target => {
   const element = renderHeader(target);
 
   // Init interactivity
-  const release = moment([2018, 3, 1]);
+  const release = moment([2020, 3, 1]);
   const updateDate = () => {
     const time = release.diff(moment(), 'seconds', true);
     element.querySelector('.home-header__time').textContent = time.toFixed(3);
