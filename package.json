@@ -12,23 +12,23 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "hash-router": "^0.4.0",
-    "moment": "^2.19.3",
-    "whatwg-fetch": "^2.0.3"
+    "moment": "^2.22.2",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "chalk": "^2.3.0",
-    "cross-env": "^5.1.1",
-    "css-loader": "^0.28.11",
-    "file-loader": "^1.1.11",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.2",
+    "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
     "html-webpack-harddisk-plugin": "^0.2.0",
-    "html-webpack-plugin": "^3.0.6",
-    "http-server": "^0.10.0",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12",
-    "webpack-dev-server": "^3.1.1"
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
   }
 }

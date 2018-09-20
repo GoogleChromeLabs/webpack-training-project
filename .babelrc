@@ -1,7 +1,12 @@
 {
-  "presets": [["env", {
-    "targets": {
-      "browsers": ["last 2 versions", "ie >= 11"]
-    }
-  }]]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": "> 0.25%, ie 11, not dead"
+        }
+      }
+    ]
+  ]
 }
